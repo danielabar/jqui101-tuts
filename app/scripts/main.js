@@ -5,6 +5,13 @@
   var wrap = $('#main-view');
   var subheader = $('#sub-header');
 
+  var assetLocation = function(asset) {
+    return {
+      htmlLoc: 'partials/' + asset + '.html',
+      jsLoc: 'scripts/' + asset + '.js'
+    };
+  };
+
   var loadHtml = function(element, path) {
     return element.load(path).promise();
   };
@@ -15,12 +22,10 @@
 
   $('.dynamicLink').on('click', function(e) {
     var $this = $(this);
-    var asset = $this.data('asset');
-    var htmlLoc = 'partials/' + asset + '.html';
-    var jsLoc = 'scripts/' + asset + '.js';
-    loadHtml(wrap, htmlLoc).done(function() {
+    var assets = assetLocation($this.data('asset'));
+    loadHtml(wrap, assets.htmlLoc).done(function() {
       subheader.text($this.data('heading'));
-      loadScript(jsLoc);
+      loadScript(assets.jsLoc);
     });
     e.preventDefault();
   });
