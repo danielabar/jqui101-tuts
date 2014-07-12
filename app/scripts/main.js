@@ -20,29 +20,27 @@
     return $.getScript(path).promise();
   };
 
-  $('.dynamicLinks a').on('click', function() {
-    var $this = $(this);
-    var assets = assetLocation($this.attr('href').slice(1));
-    loadHtml(wrap, assets.htmlLoc).done(function() {
-      wrap.hide();
-      subheader.text($this.data('heading'));
-      wrap.fadeIn();
-      loadScript(assets.jsLoc);
-    });
-  });
-
-  window.onload = function() {
-    var locationHash = location.hash || '#intro';
-    var stripHash = locationHash.slice(1);
-    var assets = assetLocation(stripHash);
-    var selector = 'a[href=\'' + locationHash + '\']';
-    var heading = $(selector).data('heading');
+  var loadContent = function(assets, heading) {
     loadHtml(wrap, assets.htmlLoc).done(function() {
       wrap.hide();
       subheader.text(heading);
       wrap.fadeIn();
       loadScript(assets.jsLoc);
     });
+  };
+
+  $('.dynamicLinks a').on('click', function() {
+    var $this = $(this);
+    var assets = assetLocation($this.attr('href').slice(1));
+    var heading = $this.data('heading');
+    loadContent(assets, heading);
+  });
+
+  window.onload = function() {
+    var locationHash = location.hash || '#intro';
+    var assets = assetLocation(locationHash.slice(1));
+    var heading = $('a[href=\'' + locationHash + '\']').data('heading');
+    loadContent(assets, heading);
   };
 
 })();
