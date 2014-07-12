@@ -22,7 +22,7 @@
 
   $('.dynamicLinks a').on('click', function() {
     var $this = $(this);
-    var assets = assetLocation($this.data('asset'));
+    var assets = assetLocation($this.attr('href').slice(1));
     loadHtml(wrap, assets.htmlLoc).done(function() {
       wrap.hide();
       subheader.text($this.data('heading'));
@@ -32,16 +32,17 @@
   });
 
   window.onload = function() {
-    if (location.hash) {
-      var stripHash = location.hash.slice(1);
-      var assets = assetLocation(stripHash);
-      loadHtml(wrap, assets.htmlLoc).done(function() {
-        wrap.hide();
-        subheader.text(stripHash);
-        wrap.fadeIn();
-        loadScript(assets.jsLoc);
-      });
-    }
+    var locationHash = location.hash || '#intro';
+    var stripHash = locationHash.slice(1);
+    var assets = assetLocation(stripHash);
+    var selector = 'a[href=\'' + locationHash + '\']';
+    var heading = $(selector).data('heading');
+    loadHtml(wrap, assets.htmlLoc).done(function() {
+      wrap.hide();
+      subheader.text(heading);
+      wrap.fadeIn();
+      loadScript(assets.jsLoc);
+    });
   };
 
 })();
