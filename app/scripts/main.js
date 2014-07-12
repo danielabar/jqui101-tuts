@@ -24,7 +24,9 @@
     var $this = $(this);
     var assets = assetLocation($this.data('asset'));
     loadHtml(wrap, assets.htmlLoc).done(function() {
+      wrap.hide();
       subheader.text($this.data('heading'));
+      wrap.fadeIn();
       loadScript(assets.jsLoc);
     });
     e.preventDefault();
