@@ -20,7 +20,7 @@
     return $.getScript(path).promise();
   };
 
-  $('.dynamicLink').on('click', function(e) {
+  $('.dynamicLinks a').on('click', function() {
     var $this = $(this);
     var assets = assetLocation($this.data('asset'));
     loadHtml(wrap, assets.htmlLoc).done(function() {
@@ -29,7 +29,19 @@
       wrap.fadeIn();
       loadScript(assets.jsLoc);
     });
-    e.preventDefault();
   });
+
+  window.onload = function() {
+    if (location.hash) {
+      var stripHash = location.hash.slice(1);
+      var assets = assetLocation(stripHash);
+      loadHtml(wrap, assets.htmlLoc).done(function() {
+        wrap.hide();
+        subheader.text(stripHash);
+        wrap.fadeIn();
+        loadScript(assets.jsLoc);
+      });
+    }
+  };
 
 })();
