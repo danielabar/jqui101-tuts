@@ -13,18 +13,14 @@
     return $.getScript(path).promise();
   };
 
-  $('#accordionLink').on('click', function(e) {
-    loadHtml(wrap, 'partials/accordion.html').done(function() {
-      subheader.text('The Accordion Widget');
-      loadScript('scripts/accordion.js');
-    });
-    e.preventDefault();
-  });
-
-  $('#tabsLink').on('click', function(e) {
-    loadHtml(wrap, 'partials/tabs.html').done(function() {
-      subheader.text('The Tabs Widget');
-      loadScript('scripts/tabs.js');
+  $('.dynamicLink').on('click', function(e) {
+    var $this = $(this);
+    var asset = $this.data('asset');
+    var htmlLoc = 'partials/' + asset + '.html';
+    var jsLoc = 'scripts/' + asset + '.js';
+    loadHtml(wrap, htmlLoc).done(function() {
+      subheader.text($this.data('heading'));
+      loadScript(jsLoc);
     });
     e.preventDefault();
   });

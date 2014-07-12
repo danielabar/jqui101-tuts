@@ -15,6 +15,8 @@
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../bower_components/jqueryui/themes/eggplant/jquery-ui.css">
+  <link rel="stylesheet" href="../bower_components/jqueryui/themes/eggplant/theme.css">
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -32,9 +34,9 @@
       <ul class="sidebar-nav">
         <li class="sidebar-brand"><a href="#">jQuery UI 101</a>
         </li>
-        <li><a id="accordionLink" href="#">Accordion Widget</a>
+        <li><a id="accordionLink" class="dynamicLink" data-asset="accordion" data-heading="The Accordion Widget" href="#">Accordion Widget</a>
         </li>
-        <li><a id="tabsLink" href="#">Tabs Widget</a>
+        <li><a class="dynamicLink" data-asset="tabs" data-heading="The Tabs Widget" href="#">Tabs Widget</a>
         </li>
         <li><a href="#">Overview</a>
         </li>
@@ -90,6 +92,8 @@
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../bower_components/jqueryui/jquery-ui.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
