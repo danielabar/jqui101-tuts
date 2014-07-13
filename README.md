@@ -51,7 +51,7 @@ This seems like a strange way to call methods in JavaScript, but its consistent 
 
 ## The Accordion Widget
 
-[JavaScript](app/scripts/accordion.js) [HTML](app/partials/accordion.html) [Demo](http://danielabar.github.io/jqui101-tuts/#accordion)
+[Demo](http://danielabar.github.io/jqui101-tuts/#accordion) | [JavaScript](app/scripts/accordion.js) | [HTML](app/partials/accordion.html)
 
 Configuration options:
 
@@ -71,7 +71,7 @@ Accordion events:
 
 ## The Tabs Widget
 
-[JavaScript](app/scripts/tabs.js) [HTML](app/partials/tabs.html) [Demo](http://danielabar.github.io/jqui101-tuts/#tabs)
+[Demo](http://danielabar.github.io/jqui101-tuts/#tabs) | [JavaScript](app/scripts/tabs.js) | [HTML](app/partials/tabs.html) 
 
 Configuration options:
 
