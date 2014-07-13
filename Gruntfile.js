@@ -100,7 +100,8 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     base: '<%= config.dist %>',
-                    livereload: false
+                    livereload: false,
+                    port: 9001
                 }
             }
         },
@@ -311,6 +312,13 @@ module.exports = function (grunt) {
                 'accordion.js',
                 'tabs.js'
               ]
+            },
+            themeImages: {
+              expand: true,
+              dot: true,
+              cwd: 'bower_components/jqueryUI/themes/eggplant/images',
+              src: ['*.png'],
+              dest: '<%= config.dist %>/styles/images'
             }
         },
 
@@ -376,6 +384,7 @@ module.exports = function (grunt) {
         'copy:dist',
         'rev',
         'copy:dynamicScripts',
+        'copy:themeImages',
         'usemin',
         'htmlmin'
     ]);
