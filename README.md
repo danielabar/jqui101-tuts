@@ -132,10 +132,21 @@ Tooltip configuration options:
 * disabled
 * hide (set animation to hide)
 * items (thing that tooltip is attached to, this is a jQuery selector)
-* positions
+* positions (default is top left)
 * show (set animation to show)
-* tooltipclass
-* track
+* tooltipclass (add custom class to tooltip so that it can be styled)
+* track (use to have tooltip track position of mouse)
+
+Tooltip unique methods:
+
+* open (used for triggerring a tooltip when hovering over a different element than the one the tooltip is attached to, eg: help icon)
+* close
+
+Events:
+
+* create
+* open
+* close
 
 ### Development
 
