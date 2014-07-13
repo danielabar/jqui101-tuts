@@ -51,9 +51,9 @@ This seems like a strange way to call methods in JavaScript, but its consistent 
 
 ## The Accordion Widget
 
-[JavaScript](app/scripts/accordion.js) and [HTML](app/partials/accordion.html)
+[JavaScript](app/scripts/accordion.js) [HTML](app/partials/accordion.html) [Demo](http://danielabar.github.io/jqui101-tuts/#accordion)
 
-Exposes configuration options:
+Configuration options:
 
 * active (defaults to first panel)
 * animate (defaults to slide)
@@ -68,6 +68,23 @@ Fires events:
 * active
 * beforeactive
 * create (nearly every widget triggers create event when initialized)
+
+## The Tabs Widget
+
+[JavaScript](app/scripts/tabs.js) [HTML](app/partials/tabs.html) [Demo](http://danielabar.github.io/jqui101-tuts/#tabs)
+
+Configuration options:
+
+* active (which tab panel is initially visible)
+* collapsible (controls whether one tab must be open at all times or whether they can all be closed)
+* disabled (same as accordion, part of common API)
+* event (which user event triggers showing of tab, default is `click`, but could be changed to `mouseover`)
+* hidestyle (same as accordion)
+  * `auto` all tabs will be fixed height, no matter how much content the open tab has in it, its height is based on tab panel that has the most content
+  * `content` tabs will grow in height according to content in visible tab
+  * `fill` tabs will fill total height of their container and ignore content in each panel
+* hide (controls animation for when tab is hidden, default is null)
+* show (controls animation for when tab is shown, default is null)
 
 ### Development
 
