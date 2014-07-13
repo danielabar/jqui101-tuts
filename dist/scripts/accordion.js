@@ -1,9 +1,45 @@
 'use strict';
 
 $(function() {
-  // panels are zero-based, active 1 means second panel will be visible
-  $('#accordion').accordion({
-    active: 1,
-    animate: 500  // ms that default animation will run for, can also set to false to have no animation
+
+  // Default settings
+  $('#accordion-default').accordion();
+
+  // Make second panel open
+  $('#accordion-second').accordion({
+    active: 1
   });
+
+  // No animation
+  $('#accordion-noanimate').accordion({
+    animate: false
+  });
+
+  // Animation Duration
+  $('#accordion-duration').accordion({
+    animate: 1000
+  });
+
+  // Animation Easing
+  $('#accordion-easing').accordion({
+    animate: 'easeOutBounce'
+  });
+
+  // Easing Down
+  $('#easing-down').accordion({
+    animate: {
+      easing: 'linear',
+      duration: 100,
+      down: {
+        easing: 'easeOutBounce',
+        duration: 300
+      }
+    }
+  });
+
+  // Collapsible
+  $('#accordion-collapsible').accordion({
+
+  });
+
 });
