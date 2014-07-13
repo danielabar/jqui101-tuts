@@ -311,7 +311,8 @@ module.exports = function (grunt) {
                 'intro.js',
                 'accordion.js',
                 'tabs.js',
-                'button.js'
+                'button.js',
+                'tooltip.js'
               ]
             },
             themeImages: {

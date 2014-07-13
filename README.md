@@ -116,6 +116,26 @@ List of icons that can be used with buttons [here](http://jqueryui.com/themeroll
 
 Checkbox and radio buttons behave like their native counterparts.
 Checbox can be either on or off, and a group of radio buttons can only have one on at a time.
+Radio buttons must be grouped in a set, `buttonset()` method is used instead of `button()`
+
+## The Tooltip Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#tooltip) | [JavaScript](app/scripts/tooltip.js) | [HTML](app/partials/tooltip.html)
+
+Designed to replace the native tooltip so that features can be customized such as appearance, position, open/close animations.
+
+Tooltips can be attached to any element. By default, it uses the title attribute as the tooltip text.
+
+Tooltip configuration options:
+
+* content (used with items, changing content used within tooltip, eg: use alt instead of title, can be string literal or a function)
+* disabled
+* hide (set animation to hide)
+* items (thing that tooltip is attached to, this is a jQuery selector)
+* positions
+* show (set animation to show)
+* tooltipclass
+* track
 
 ### Development
 
