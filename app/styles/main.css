@@ -125,3 +125,7 @@
   border-bottom: 1px solid #8B8A94;
   border-radius: 0.4em;
 }
+
+.top-buffer {
+  margin-top: 0.5em;
+}

@@ -49,6 +49,8 @@ For example, to disable an accordion:
 
 This seems like a strange way to call methods in JavaScript, but its consistent across the jQueryUI framework.
 
+All event handlers get passed an event and ui object, by convention named `e` and `ui`
+
 ## The Accordion Widget
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#accordion) | [JavaScript](app/scripts/accordion.js) | [HTML](app/partials/accordion.html)
@@ -71,7 +73,7 @@ Accordion events:
 
 ## The Tabs Widget
 
-[Demo](http://danielabar.github.io/jqui101-tuts/#tabs) | [JavaScript](app/scripts/tabs.js) | [HTML](app/partials/tabs.html) 
+[Demo](http://danielabar.github.io/jqui101-tuts/#tabs) | [JavaScript](app/scripts/tabs.js) | [HTML](app/partials/tabs.html)
 
 Configuration options:
 
@@ -103,6 +105,17 @@ Tabs events:
 * beforeload
 * create
 * load
+
+## The Button Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#button) | [JavaScript](app/scripts/button.js) | [HTML](app/partials/button.html)
+
+Button widget more for presentation than functionality. Just has the common configuration options and only create event.
+
+List of icons that can be used with buttons [here](http://jqueryui.com/themeroller/)
+
+Checkbox and radio buttons behave like their native counterparts.
+Checbox can be either on or off, and a group of radio buttons can only have one on at a time.
 
 ### Development
 

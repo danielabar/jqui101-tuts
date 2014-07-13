@@ -310,7 +310,8 @@ module.exports = function (grunt) {
               src: [
                 'intro.js',
                 'accordion.js',
-                'tabs.js'
+                'tabs.js',
+                'button.js'
               ]
             },
             themeImages: {
