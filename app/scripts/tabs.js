@@ -11,4 +11,13 @@
     tabsElement.tabs('option', 'hide', 'explode');
   });
 
+  $('#changeEvent').on('click', function() {
+    tabsElement.tabs('option', 'event', 'mouseover');
+  });
+
+  // Load the 4th tab (tab indicies are zero-based)
+  $('#reloadRemote').on('click', function() {
+    tabsElement.tabs('load', 3);
+  });
+
 })();

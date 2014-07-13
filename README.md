@@ -63,7 +63,7 @@ Configuration options:
 * hidestyle (controls how much space the widget takes up, by default is auto, and determined by panel that has most content)
 * icons (controls open and closed icons)
 
-Fires events:
+Accordion events:
 
 * active
 * beforeactive
@@ -85,6 +85,24 @@ Configuration options:
   * `fill` tabs will fill total height of their container and ignore content in each panel
 * hide (controls animation for when tab is hidden, default is null)
 * show (controls animation for when tab is shown, default is null)
+
+Method unique to tabs:
+
+`load` used to reload content of remote tab.
+
+Remote tab has href pointing to file where content resides. Should be on same domain.
+
+Remote tab content is lazily loaded - i.e. not loaded until tab is clicked on.
+
+Note that remote tabs are not cached, so every click will result in another request to server.
+
+Tabs events:
+
+* activate
+* beforeactivate
+* beforeload
+* create
+* load
 
 ### Development
 
