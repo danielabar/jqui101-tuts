@@ -300,6 +300,17 @@ module.exports = function (grunt) {
                 cwd: '<%= config.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            dynamicScripts: {
+              expand: true,
+              dot: true,
+              cwd: '<%= config.app %>/scripts',
+              dest: '<%= config.dist %>/scripts',
+              src: [
+                'intro.js',
+                'accordion.js',
+                'tabs.js'
+              ]
             }
         },
 
@@ -364,6 +375,7 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'rev',
+        'copy:dynamicScripts',
         'usemin',
         'htmlmin'
     ]);
