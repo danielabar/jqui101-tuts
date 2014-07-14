@@ -126,7 +126,7 @@ Designed to replace the native tooltip so that features can be customized such a
 
 Tooltips can be attached to any element. By default, it uses the title attribute as the tooltip text.
 
-Tooltip configuration options:
+Configuration options:
 
 * content (used with items, changing content used within tooltip, eg: use alt instead of title, can be string literal or a function)
 * disabled
@@ -137,7 +137,7 @@ Tooltip configuration options:
 * tooltipclass (add custom class to tooltip so that it can be styled)
 * track (use to have tooltip track position of mouse)
 
-Tooltip unique methods:
+Unique methods:
 
 * open (used for triggerring a tooltip when hovering over a different element than the one the tooltip is attached to, eg: help icon)
 * close
@@ -147,6 +147,37 @@ Events:
 * create
 * open
 * close
+
+## The Dialg Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#dialog) | [JavaScript](app/scripts/dialog.js) | [HTML](app/partials/dialog.html)
+
+Extensive API, very flexible. Can be draggable, resizable, modal.
+
+Default dialog is resizable, draggable, has close button at top right, and is shown as soon as its initialized.
+
+Configuration options:
+
+* appendto (by default, dialog is added as child of body element, but could append to different element using this option)
+* autoopen
+* buttons (to add buttons to the dialog)
+* closeonescape
+* closetext (used to set title attribute of close button that gets added automatically, default is 'close')
+* dialogclass
+* draggable
+* height
+* hide
+* maxheight
+* maxwidth
+* minheight
+* minwidth
+* modal
+* position
+* resizable
+* title (to set a title on the dialog, OR set a title attribute on the html container element)
+* show
+* width
+
 
 ### Development
 
