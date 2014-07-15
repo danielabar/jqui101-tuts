@@ -313,7 +313,8 @@ module.exports = function (grunt) {
                 'tabs.js',
                 'button.js',
                 'tooltip.js',
-                'dialog.js'
+                'dialog.js',
+                'menu.js'
               ]
             },
             themeImages: {

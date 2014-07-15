@@ -55,7 +55,7 @@ All event handlers get passed an event and ui object, by convention named `e` an
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#accordion) | [JavaScript](app/scripts/accordion.js) | [HTML](app/partials/accordion.html)
 
-Configuration options:
+#### Configuration options:
 
 * active (defaults to first panel)
 * animate (defaults to slide)
@@ -65,7 +65,7 @@ Configuration options:
 * hidestyle (controls how much space the widget takes up, by default is auto, and determined by panel that has most content)
 * icons (controls open and closed icons)
 
-Accordion events:
+#### Events:
 
 * active
 * beforeactive
@@ -75,7 +75,7 @@ Accordion events:
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#tabs) | [JavaScript](app/scripts/tabs.js) | [HTML](app/partials/tabs.html)
 
-Configuration options:
+#### Configuration options:
 
 * active (which tab panel is initially visible)
 * collapsible (controls whether one tab must be open at all times or whether they can all be closed)
@@ -88,7 +88,7 @@ Configuration options:
 * hide (controls animation for when tab is hidden, default is null)
 * show (controls animation for when tab is shown, default is null)
 
-Method unique to tabs:
+#### Unique Method:
 
 `load` used to reload content of remote tab.
 
@@ -98,7 +98,7 @@ Remote tab content is lazily loaded - i.e. not loaded until tab is clicked on.
 
 Note that remote tabs are not cached, so every click will result in another request to server.
 
-Tabs events:
+#### Events:
 
 * activate
 * beforeactivate
@@ -126,7 +126,7 @@ Designed to replace the native tooltip so that features can be customized such a
 
 Tooltips can be attached to any element. By default, it uses the title attribute as the tooltip text.
 
-Configuration options:
+#### Configuration options:
 
 * content (used with items, changing content used within tooltip, eg: use alt instead of title, can be string literal or a function)
 * disabled
@@ -137,18 +137,18 @@ Configuration options:
 * tooltipclass (add custom class to tooltip so that it can be styled)
 * track (use to have tooltip track position of mouse)
 
-Unique methods:
+#### Unique methods
 
 * open (used for triggerring a tooltip when hovering over a different element than the one the tooltip is attached to, eg: help icon)
 * close
 
-Events:
+#### Events
 
 * create
 * open
 * close
 
-## The Dialg Widget
+## The Dialog Widget
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#dialog) | [JavaScript](app/scripts/dialog.js) | [HTML](app/partials/dialog.html)
 
@@ -156,7 +156,7 @@ Extensive API, highly configurable. Can be draggable, resizable, modal.
 
 Default dialog is resizable, draggable, has close button at top right, and is shown as soon as its initialized.
 
-Configuration options:
+#### Configuration options
 
 * appendto (by default, dialog is added as child of body element, but could append to different element using this option)
 * autoopen
@@ -178,11 +178,46 @@ Configuration options:
 * show
 * width
 
-Unique Methods:
+#### Unique Methods
 
 * moveToTop (move specified dialog to top of z-index stack)
 * isOpen
 
+## The Menu Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#menu) | [JavaScript](app/scripts/menu.js) | [HTML](app/partials/menu.html)
+
+Used to make vertical menus and sub-menus. Works with unordered lists.
+
+Don't use div as outer container, instead this will be a `<ul>`
+
+Menu will automatically fill the width of its container.
+
+#### Configuration Options
+
+* disabled
+* icons (any menu item containing a submenu automatically gets an icon indicating this, by default its right arrow, can be changed with this option)
+* menus
+* position
+* role
+
+#### Unique Methods
+
+* lower
+* collapse (close the most recently opened submenu, method takes no arguments, works with active item)
+* collapseAll (close all submenus in a tree)
+* expand
+* focus
+* isFirstItem
+* isLastItem
+* next
+* nextPage
+* previous
+* previousPage
+* select
+
+If want to give a non sub-menu entry an icon, need to do that manually in the html.
+Add an empty inline element and reference one of the [library icons](http://api.jqueryui.com/theming/icons/).
 
 ### Development
 
