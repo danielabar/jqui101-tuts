@@ -43,4 +43,9 @@
     $('#dialog4').dialog('open');
   });
 
+  // Move simple dialog to top of stack
+  $('#moveDialogTop').on('click', function() {
+    $('#dialog1').dialog('moveToTop');
+  });
+
 })();

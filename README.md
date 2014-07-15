@@ -152,7 +152,7 @@ Events:
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#dialog) | [JavaScript](app/scripts/dialog.js) | [HTML](app/partials/dialog.html)
 
-Extensive API, very flexible. Can be draggable, resizable, modal.
+Extensive API, highly configurable. Can be draggable, resizable, modal.
 
 Default dialog is resizable, draggable, has close button at top right, and is shown as soon as its initialized.
 
@@ -172,11 +172,16 @@ Configuration options:
 * minheight
 * minwidth
 * modal
-* position
+* position (by default, dialog is positioned at center of screen)
 * resizable
 * title (to set a title on the dialog, OR set a title attribute on the html container element)
 * show
 * width
+
+Unique Methods:
+
+* moveToTop (move specified dialog to top of z-index stack)
+* isOpen
 
 
 ### Development
