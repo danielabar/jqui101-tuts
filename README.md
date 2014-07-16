@@ -188,6 +188,7 @@ Default dialog is resizable, draggable, has close button at top right, and is sh
 [Demo](http://danielabar.github.io/jqui101-tuts/#menu) | [JavaScript](app/scripts/menu.js) | [HTML](app/partials/menu.html)
 
 Used to make vertical menus and sub-menus. Works with unordered lists.
+css could be tweaked to make horizontal menus as well.
 
 Don't use div as outer container, instead this will be a `<ul>`
 
@@ -216,8 +217,17 @@ Menu will automatically fill the width of its container.
 * previousPage
 * select
 
+#### Events
+
+* blur
+* create
+* focus (fired when menu item gains focus, either programmatically via focus method, or via mouse or keyboard)
+* select (fired when menu item is clicked or selected with keyboard)
+
 If want to give a non sub-menu entry an icon, need to do that manually in the html.
 Add an empty inline element and reference one of the [library icons](http://api.jqueryui.com/theming/icons/).
+
+When working with menu programmatically, need to set which item is active. Then expand and collapse methods can be called.
 
 ### Development
 
