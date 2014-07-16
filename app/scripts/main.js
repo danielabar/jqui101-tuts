@@ -17,7 +17,7 @@
   };
 
   var loadScript = function(path) {
-    return $.getScript(path).promise();
+    $.getScript(path);
   };
 
   var loadContent = function(assets, heading) {

@@ -398,4 +398,6 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('preview', ['connect:dist:keepalive']);
 };
