@@ -303,5 +303,5 @@ Make sure optimized version of site is working locally.
 Push changes to master, then:
 
   ```
-  git subtree push --prefix dist origin gh-pages
+  grunt deploy
   ```
