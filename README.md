@@ -1,3 +1,36 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Tuts Plus: jQuery UI 101: The Essentials](#tuts-plus-jquery-ui-101-the-essentials)
+  - [Introduction](#introduction)
+  - [The Accordion Widget](#the-accordion-widget)
+      - [Configuration options:](#configuration-options)
+      - [Events:](#events)
+  - [The Tabs Widget](#the-tabs-widget)
+      - [Configuration options:](#configuration-options-1)
+      - [Unique Method:](#unique-method)
+      - [Events:](#events-1)
+  - [The Button Widget](#the-button-widget)
+  - [The Tooltip Widget](#the-tooltip-widget)
+      - [Configuration options:](#configuration-options-2)
+      - [Unique methods](#unique-methods)
+      - [Events](#events)
+  - [The Dialog Widget](#the-dialog-widget)
+      - [Configuration options](#configuration-options)
+      - [Unique Methods](#unique-methods)
+  - [The Menu Widget](#the-menu-widget)
+      - [Configuration Options](#configuration-options)
+      - [Unique Methods](#unique-methods-1)
+      - [Events](#events-1)
+  - [The Spinner Widget](#the-spinner-widget)
+      - [Configuration Options](#configuration-options-1)
+    - [Development](#development)
+    - [Build](#build)
+    - [Deploy](#deploy)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Tuts Plus: jQuery UI 101: The Essentials
 
 Learning [jQuery UI](https://courses.tutsplus.com/courses/jquery-ui-101-the-essentials) with [Tuts Plus](https://tutsplus.com/)
@@ -228,6 +261,27 @@ If want to give a non sub-menu entry an icon, need to do that manually in the ht
 Add an empty inline element and reference one of the [library icons](http://api.jqueryui.com/theming/icons/).
 
 When working with menu programmatically, need to set which item is active. Then expand and collapse methods can be called.
+
+## The Spinner Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#spinner) | [JavaScript](app/scripts/spinner.js) | [HTML](app/partials/spinner.html)
+
+Attaches to input element, provides way to easily move up and down over values.
+
+Supports min/max values and stepped increments.
+
+#### Configuration Options
+
+* counter?
+* disabled
+* icons (sets icons used for up and down buttons)
+* incremental
+* max (sets max value spinner can go to, by default there is no limit)
+* min (sets min value spinner can go to, by default there is no limit)
+* numberformat
+* page
+* step (used to control number of steps spinner takes when buttons are used)
+
 
 ### Development
 

@@ -314,7 +314,8 @@ module.exports = function (grunt) {
                 'button.js',
                 'tooltip.js',
                 'dialog.js',
-                'menu.js'
+                'menu.js',
+                'spinner.js'
               ]
             },
             themeImages: {
