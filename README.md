@@ -301,6 +301,26 @@ Supports min/max values and stepped increments.
  * start
  * stop
 
+## The Slider Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#slider) | [JavaScript](app/scripts/slider.js) | [HTML](app/partials/slider.html)
+
+Useful when user is expected to provide one from a set of values. Can be used horizontally and vertically.
+
+Any element can be turned into a slider, but `div` is most commonly used.
+
+#### Configuratioin Options
+
+* animate
+* disabled
+* max
+* min
+* orientation
+* range
+* step
+* value
+* values
+
 ## Development
 
   ```
