@@ -331,6 +331,19 @@ These can be used as getters and setters
 * value
 * values
 
+#### Events
+
+Multiple events will fire during any single interaction with the slider.
+
+* create
+* start (fires first for an interaction)
+* slide (fires after `start` for an interaction, fires on every single mouse move)
+* stop (fires when thumb event stops sliding)
+* change (fires if value changes)
+
+Note that you can bind to events either during widget initialization, by simply referencing the event name,
+
+OR after using jQuery `on`, in which case, you must reference the widget name followed by event name.
 
 ## Development
 

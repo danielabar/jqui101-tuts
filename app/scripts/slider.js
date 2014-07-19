@@ -33,7 +33,12 @@
   });
   $('#setValue').on('click', function() {
     $('#slider6').slider('value', 99);
-    toastr.info('Value Method Slider changed to: ' + 99);
+    toastr.success('Value Method Slider changed to: ' + 99);
+  });
+
+  // Bind events to slider6 AFTER it has been initialized
+  $('#slider6').on('slidecreate slidechange slidestart slidestop slide', function(e) {
+    console.log('The event is: ' + e.type);
   });
 
 })();
