@@ -25,6 +25,16 @@
       - [Configuration Options](#configuration-options-1)
       - [Unique Methods](#unique-methods-2)
       - [Events](#events-2)
+  - [The Slider Widget](#the-slider-widget)
+      - [Configuratioin Options](#configuratioin-options)
+      - [Unique Methods](#unique-methods-3)
+      - [Events](#events-3)
+  - [The Datepicker Widget](#the-datepicker-widget)
+      - [Configuration Options: Visible UI](#configuration-options-visible-ui)
+      - [Configuration Options: Input and Immediate Vicinity](#configuration-options-input-and-immediate-vicinity)
+      - [Configuration Options: Visible Text](#configuration-options-visible-text)
+      - [Unique Methods](#unique-methods-4)
+      - [Events](#events-4)
   - [Development](#development)
   - [Build](#build)
   - [Deploy](#deploy)
@@ -362,7 +372,7 @@ Attached to standard input elements and provides sensible defaults so can be use
 * minDate (useful to ensure only future dates are selectable, for example, set it to current date)
 * navigationasdateformat
 * numberofmonths
-* selectothermonths
+* selectOtherMonths (default false, given that showOtherMonths is true, make those dates selectable)
 * shortyearcutoff
 * showOtherMonths (default false, set to true to show dates from previous and next month)
 * showbuttonpanel
@@ -371,6 +381,61 @@ Attached to standard input elements and provides sensible defaults so can be use
 * stepmonths
 * yearrange
 
+#### Configuration Options: Input and Immediate Vicinity
+
+* altField
+* appendText (value is text to be appended, for example, useful to display expected date format)
+  * generates span with class `ui-datepicker-append` so styling can be customized
+* autoSize
+* buttonImage
+* buttonImageOnly
+* buttonText
+* constrainInput
+* duration
+* showHeading
+* showOn
+* showOptions
+
+#### Configuration Options: Visible Text
+
+All strings displayed within date picker can be localized.
+Add appropriate datepicker language script from [here](https://github.com/jquery/jquery-ui/tree/master/ui/i18n)
+
+* closeText
+* currentText
+* dateFormat (see options [here](http://api.jqueryui.com/datepicker/))
+* dayNames
+* dayNamesMin
+* dayNamesShort
+* isRtl
+* monthNames
+* monthNamesShort
+* nextText
+* prevText
+* weekHeader
+* yearSuffix
+
+#### Unique Methods
+
+* dialog
+* isDisabled
+* height
+* show
+* refresh
+* getDate
+* setDAte
+
+#### Events
+
+Can't bind to these events using jQuery's `on` method.
+Must set handlers for them when initializing the datepicker widget, via configuration options.
+
+* beforeShow
+* beforeShowDay (most useful, fired before every single date on the calendar is created)
+  * for example, could use this to filter out certain dates to make them unselectable
+* onChangeMonthYear
+* onClose
+* onSelect
 
 ## Development
 
