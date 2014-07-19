@@ -3,38 +3,42 @@
 - [Tuts Plus: jQuery UI 101: The Essentials](#tuts-plus-jquery-ui-101-the-essentials)
   - [Introduction](#introduction)
   - [The Accordion Widget](#the-accordion-widget)
-      - [Configuration options:](#configuration-options)
-      - [Events:](#events)
+    - [Configuration options:](#configuration-options)
+    - [Events:](#events)
   - [The Tabs Widget](#the-tabs-widget)
-      - [Configuration options:](#configuration-options-1)
-      - [Unique Method:](#unique-method)
-      - [Events:](#events-1)
+    - [Configuration options:](#configuration-options-1)
+    - [Unique Method:](#unique-method)
+    - [Events:](#events-1)
   - [The Button Widget](#the-button-widget)
   - [The Tooltip Widget](#the-tooltip-widget)
-      - [Configuration options:](#configuration-options-2)
-      - [Unique methods](#unique-methods)
-      - [Events](#events)
+    - [Configuration options:](#configuration-options-2)
+    - [Unique methods](#unique-methods)
+    - [Events](#events)
   - [The Dialog Widget](#the-dialog-widget)
-      - [Configuration options](#configuration-options)
-      - [Unique Methods](#unique-methods)
+    - [Configuration options](#configuration-options)
+    - [Unique Methods](#unique-methods)
   - [The Menu Widget](#the-menu-widget)
-      - [Configuration Options](#configuration-options)
-      - [Unique Methods](#unique-methods-1)
-      - [Events](#events-1)
+    - [Configuration Options](#configuration-options)
+    - [Unique Methods](#unique-methods-1)
+    - [Events](#events-1)
   - [The Spinner Widget](#the-spinner-widget)
-      - [Configuration Options](#configuration-options-1)
-      - [Unique Methods](#unique-methods-2)
-      - [Events](#events-2)
+    - [Configuration Options](#configuration-options-1)
+    - [Unique Methods](#unique-methods-2)
+    - [Events](#events-2)
   - [The Slider Widget](#the-slider-widget)
-      - [Configuratioin Options](#configuratioin-options)
-      - [Unique Methods](#unique-methods-3)
-      - [Events](#events-3)
+    - [Configuratioin Options](#configuratioin-options)
+    - [Unique Methods](#unique-methods-3)
+    - [Events](#events-3)
   - [The Datepicker Widget](#the-datepicker-widget)
-      - [Configuration Options: Visible UI](#configuration-options-visible-ui)
-      - [Configuration Options: Input and Immediate Vicinity](#configuration-options-input-and-immediate-vicinity)
-      - [Configuration Options: Visible Text](#configuration-options-visible-text)
-      - [Unique Methods](#unique-methods-4)
-      - [Events](#events-4)
+    - [Configuration Options: Visible UI](#configuration-options-visible-ui)
+    - [Configuration Options: Input and Immediate Vicinity](#configuration-options-input-and-immediate-vicinity)
+    - [Configuration Options: Visible Text](#configuration-options-visible-text)
+    - [Unique Methods](#unique-methods-4)
+    - [Events](#events-4)
+  - [The Autcomplete Widget](#the-autcomplete-widget)
+    - [Configuration Options](#configuration-options-2)
+    - [Unique Methods](#unique-methods-5)
+    - [Events](#events-5)
   - [Development](#development)
   - [Build](#build)
   - [Deploy](#deploy)
@@ -98,7 +102,7 @@ All event handlers get passed an event and ui object, by convention named `e` an
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#accordion) | [JavaScript](app/scripts/accordion.js) | [HTML](app/partials/accordion.html)
 
-#### Configuration options:
+### Configuration options:
 
 * active (defaults to first panel)
 * animate (defaults to slide)
@@ -108,7 +112,7 @@ All event handlers get passed an event and ui object, by convention named `e` an
 * hidestyle (controls how much space the widget takes up, by default is auto, and determined by panel that has most content)
 * icons (controls open and closed icons)
 
-#### Events:
+### Events:
 
 * active
 * beforeactive
@@ -118,7 +122,7 @@ All event handlers get passed an event and ui object, by convention named `e` an
 
 [Demo](http://danielabar.github.io/jqui101-tuts/#tabs) | [JavaScript](app/scripts/tabs.js) | [HTML](app/partials/tabs.html)
 
-#### Configuration options:
+### Configuration options:
 
 * active (which tab panel is initially visible)
 * collapsible (controls whether one tab must be open at all times or whether they can all be closed)
@@ -131,7 +135,7 @@ All event handlers get passed an event and ui object, by convention named `e` an
 * hide (controls animation for when tab is hidden, default is null)
 * show (controls animation for when tab is shown, default is null)
 
-#### Unique Method:
+### Unique Method:
 
 `load` used to reload content of remote tab.
 
@@ -141,7 +145,7 @@ Remote tab content is lazily loaded - i.e. not loaded until tab is clicked on.
 
 Note that remote tabs are not cached, so every click will result in another request to server.
 
-#### Events:
+### Events:
 
 * activate
 * beforeactivate
@@ -169,7 +173,7 @@ Designed to replace the native tooltip so that features can be customized such a
 
 Tooltips can be attached to any element. By default, it uses the title attribute as the tooltip text.
 
-#### Configuration options:
+### Configuration options:
 
 * content (used with items, changing content used within tooltip, eg: use alt instead of title, can be string literal or a function)
 * disabled
@@ -180,12 +184,12 @@ Tooltips can be attached to any element. By default, it uses the title attribute
 * tooltipclass (add custom class to tooltip so that it can be styled)
 * track (use to have tooltip track position of mouse)
 
-#### Unique methods
+### Unique methods
 
 * open (used for triggerring a tooltip when hovering over a different element than the one the tooltip is attached to, eg: help icon)
 * close
 
-#### Events
+### Events
 
 * create
 * open
@@ -199,7 +203,7 @@ Extensive API, highly configurable. Can be draggable, resizable, modal.
 
 Default dialog is resizable, draggable, has close button at top right, and is shown as soon as its initialized.
 
-#### Configuration options
+### Configuration options
 
 * appendto (by default, dialog is added as child of body element, but could append to different element using this option)
 * autoopen
@@ -221,7 +225,7 @@ Default dialog is resizable, draggable, has close button at top right, and is sh
 * show
 * width
 
-#### Unique Methods
+### Unique Methods
 
 * moveToTop (move specified dialog to top of z-index stack)
 * isOpen
@@ -237,7 +241,7 @@ Don't use div as outer container, instead this will be a `<ul>`
 
 Menu will automatically fill the width of its container.
 
-#### Configuration Options
+### Configuration Options
 
 * disabled
 * icons (any menu item containing a submenu automatically gets an icon indicating this, by default its right arrow, can be changed with this option)
@@ -245,7 +249,7 @@ Menu will automatically fill the width of its container.
 * position
 * role
 
-#### Unique Methods
+### Unique Methods
 
 * lower
 * collapse (close the most recently opened submenu, method takes no arguments, works with active item)
@@ -260,7 +264,7 @@ Menu will automatically fill the width of its container.
 * previousPage
 * select
 
-#### Events
+### Events
 
 * blur
 * create
@@ -280,7 +284,7 @@ Attaches to input element, provides way to easily move up and down over values.
 
 Supports min/max values and stepped increments.
 
-#### Configuration Options
+### Configuration Options
 
 * counter?
 * disabled
@@ -296,7 +300,7 @@ Supports min/max values and stepped increments.
 * page
 * step (used to control number of steps spinner takes when buttons are used)
 
-#### Unique Methods
+### Unique Methods
 
 * pageup (move spinner down by specified number of steps, default is 10)
   * for example, if step option is set to 5, and pageup is invoked, spinner would increment by 10 * 5 = 50
@@ -304,7 +308,7 @@ Supports min/max values and stepped increments.
 * stepup (move value up by one step)
 * stepdown (move value down by one step)
 
-#### Events
+### Events
 
  * change
  * spin
@@ -322,7 +326,7 @@ Any element can be turned into a slider, but `div` is most commonly used.
 By default, fills width of its container.
 
 
-#### Configuratioin Options
+### Configuratioin Options
 
 * animate
 * disabled
@@ -334,14 +338,14 @@ By default, fills width of its container.
 * value (by default, slider thumb starts at position 0, use this option to change)
 * values (used for multiple handles, takes array with values representing handle positiona)
 
-#### Unique Methods
+### Unique Methods
 
 These can be used as getters and setters
 
 * value
 * values
 
-#### Events
+### Events
 
 Multiple events will fire during any single interaction with the slider.
 
@@ -361,7 +365,7 @@ OR after using jQuery `on`, in which case, you must reference the widget name fo
 
 Attached to standard input elements and provides sensible defaults so can be used out of the box.
 
-#### Configuration Options: Visible UI
+### Configuration Options: Visible UI
 
 * changeMonth (default false, set to true to make month selection a dropdown)
 * changeYear (default false, set to true to make year selection a dropdown, will show 10 years in past and 10 in future)
@@ -381,7 +385,7 @@ Attached to standard input elements and provides sensible defaults so can be use
 * stepmonths
 * yearrange
 
-#### Configuration Options: Input and Immediate Vicinity
+### Configuration Options: Input and Immediate Vicinity
 
 * altField
 * appendText (value is text to be appended, for example, useful to display expected date format)
@@ -396,7 +400,7 @@ Attached to standard input elements and provides sensible defaults so can be use
 * showOn
 * showOptions
 
-#### Configuration Options: Visible Text
+### Configuration Options: Visible Text
 
 All strings displayed within date picker can be localized.
 Add appropriate datepicker language script from [here](https://github.com/jquery/jquery-ui/tree/master/ui/i18n)
@@ -415,7 +419,7 @@ Add appropriate datepicker language script from [here](https://github.com/jquery
 * weekHeader
 * yearSuffix
 
-#### Unique Methods
+### Unique Methods
 
 * dialog
 * isDisabled
@@ -425,7 +429,7 @@ Add appropriate datepicker language script from [here](https://github.com/jquery
 * getDate
 * setDAte
 
-#### Events
+### Events
 
 Can't bind to these events using jQuery's `on` method.
 Must set handlers for them when initializing the datepicker widget, via configuration options.
@@ -436,6 +440,67 @@ Must set handlers for them when initializing the datepicker widget, via configur
 * onChangeMonthYear
 * onClose
 * onSelect
+
+## The Autcomplete Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#autocomplete) | [JavaScript](app/scripts/autocomplete.js) | [HTML](app/partials/autocomplete.html)
+
+Attached to input element. Needs a datasource to function. Supports several options to connect to datasource:
+
+* Local array, useful for small static dataset
+* Url pointing to service that returns json data
+* Function that returns matching data
+
+By default, matched letters can be anywhere in string, this behaviour can be changed.
+
+### Configuration Options
+
+* appendTo
+* autoFocus (automatically highlight first item in suggestion list)
+* delay (wait this number of ms until showing the list, useful for large datasets)
+* disable
+* minLength
+* position (default list position is below the input and left aligned)
+* source (has no default, is mandatory to specify this)
+
+### Unique Methods
+
+* close (close list if open)
+* search (perform search of data programmatically, as if the input had been typed into)
+
+### Events
+
+* change
+* close
+* create
+* focus
+* open
+* response
+* search
+* select
+
+## The Progressbar Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#progressbar) | [JavaScript](app/scripts/progressbar.js) | [HTML](app/partials/progressbar.html)
+
+Used to display progress and percent of a given task.
+System needs to tell the widget what the current progress is. Known as a _determinate_ progress bar.
+
+Can be attached to any block level element.
+
+### Configuration Options
+
+* max (what max value of progressbar is, for example, for file upload, this could be size of file)
+* value (current value, defautls to 0, but can be set programmatically)
+
+### Unique Methods
+
+* value (returns the current value of the progressbar)
+
+### Events
+
+* change (fired every time value of progressbar changes, useful for updating text indicating amount complete so far)
+* complete (fired once 100% is reached)
 
 ## Development
 
