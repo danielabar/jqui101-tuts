@@ -25,4 +25,21 @@
     step: 10
   });
 
+  // Incremental Function
+  $('#spin5').spinner({
+    incremental: function(spinNumber) {
+      var currentStep = $('#spin5').spinner('option', 'step');
+      return currentStep * spinNumber;
+    }
+  });
+
+  // Page Up - move up by 50
+  $('#spin6').spinner({
+    page: 5,
+    step: 10
+  });
+  $('#doPageUp').on('click', function() {
+    $('#spin6').spinner('pageUp');
+  });
+
 })();

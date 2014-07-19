@@ -1,7 +1,5 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
 - [Tuts Plus: jQuery UI 101: The Essentials](#tuts-plus-jquery-ui-101-the-essentials)
   - [Introduction](#introduction)
   - [The Accordion Widget](#the-accordion-widget)
@@ -25,9 +23,11 @@
       - [Events](#events-1)
   - [The Spinner Widget](#the-spinner-widget)
       - [Configuration Options](#configuration-options-1)
-    - [Development](#development)
-    - [Build](#build)
-    - [Deploy](#deploy)
+      - [Unique Methods](#unique-methods-2)
+      - [Events](#events-2)
+  - [Development](#development)
+  - [Build](#build)
+  - [Deploy](#deploy)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -275,21 +275,39 @@ Supports min/max values and stepped increments.
 * counter?
 * disabled
 * icons (sets icons used for up and down buttons)
-* incremental
+* incremental (default action is when user holds down spinner button, rate of change increases the longer its pressed)
+  * can be set to false to keep the rate of change constant
+  * can supply a function which receives number of spins that have occurred so far, and should return number of steps for current spin)
 * max (sets max value spinner can go to, by default there is no limit)
 * min (sets min value spinner can go to, by default there is no limit)
 * numberformat
+  * specify value format such as decimal, currency
+  * exact format used depends upon culture option, depends on [culture plugin](https://github.com/jquery/globalize/tree/v0.1.0a1)
 * page
 * step (used to control number of steps spinner takes when buttons are used)
 
+#### Unique Methods
 
-### Development
+* pageup (move spinner down by specified number of steps, default is 10)
+  * for example, if step option is set to 5, and pageup is invoked, spinner would increment by 10 * 5 = 50
+* pagedown (move spinner up by specified number of steps, default is 10)
+* stepup (move value up by one step)
+* stepdown (move value down by one step)
+
+#### Events
+
+ * change
+ * spin
+ * start
+ * stop
+
+## Development
 
   ```
   grunt serve
   ```
 
-### Build
+## Build
 
   ```
   grunt build
@@ -298,7 +316,7 @@ Supports min/max values and stepped increments.
 
 Make sure optimized version of site is working locally.
 
-### Deploy
+## Deploy
 
 Push changes to master, then:
 
