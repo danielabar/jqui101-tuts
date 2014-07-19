@@ -309,17 +309,28 @@ Useful when user is expected to provide one from a set of values. Can be used ho
 
 Any element can be turned into a slider, but `div` is most commonly used.
 
+By default, fills width of its container.
+
+
 #### Configuratioin Options
 
 * animate
 * disabled
-* max
-* min
-* orientation
+* max (default 100)
+* min (default 0)
+* orientation (default horizontal)
 * range
-* step
+* step (default is 1, so thumb will move smoothly along thetrack)
+* value (by default, slider thumb starts at position 0, use this option to change)
+* values (used for multiple handles, takes array with values representing handle positiona)
+
+#### Unique Methods
+
+These can be used as getters and setters
+
 * value
 * values
+
 
 ## Development
 
@@ -331,7 +342,7 @@ Any element can be turned into a slider, but `div` is most commonly used.
 
   ```
   grunt build
-  grunt connect:dist:keepalive
+  grunt preview
   ```
 
 Make sure optimized version of site is working locally.

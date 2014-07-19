@@ -28,6 +28,7 @@
         "cancelAnimationFrame",
         "Kinetic",
         "createjs",
-        "THREE"
+        "THREE".
+        "toastr"
     ]
 }
