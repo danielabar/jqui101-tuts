@@ -316,7 +316,8 @@ module.exports = function (grunt) {
                 'dialog.js',
                 'menu.js',
                 'spinner.js',
-                'slider.js'
+                'slider.js',
+                'datepicker.js'
               ]
             },
             themeImages: {

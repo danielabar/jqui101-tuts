@@ -345,6 +345,33 @@ Note that you can bind to events either during widget initialization, by simply 
 
 OR after using jQuery `on`, in which case, you must reference the widget name followed by event name.
 
+## The Datepicker Widget
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#datepicker) | [JavaScript](app/scripts/datepicker.js) | [HTML](app/partials/datepicker.html)
+
+Attached to standard input elements and provides sensible defaults so can be used out of the box.
+
+#### Configuration Options: Visible UI
+
+* changeMonth (default false, set to true to make month selection a dropdown)
+* changeYear (default false, set to true to make year selection a dropdown, will show 10 years in past and 10 in future)
+* defaultdate
+* hideifnoprevnext
+* firstday
+* maxDate
+* minDate (useful to ensure only future dates are selectable, for example, set it to current date)
+* navigationasdateformat
+* numberofmonths
+* selectothermonths
+* shortyearcutoff
+* showOtherMonths (default false, set to true to show dates from previous and next month)
+* showbuttonpanel
+* showmonthafteryear
+* showWeek (default false, set to true to show week of year)
+* stepmonths
+* yearrange
+
+
 ## Development
 
   ```
