@@ -552,6 +552,10 @@ This is accomplished using `of` key. For example, to position myElement relative
   });
   ```
 
+## Qunit
+
+Test frameowrk for jQuery.
+
 ## Development
 
   ```

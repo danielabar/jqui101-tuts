@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>qunit example</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" />
+</head>
+
+<body>
+  <div id="qunit"></div>
+  <script src="../bower_components/qunit/qunit/qunit.js"></script>
+
+  <!-- Production Code we want to test: in a real app, this would go in a separate file -->
+  <script>
+    var falsifyIt = function(it) {
+      return it = false;
+    };
+
+    test('falsifyIt returns false when passed true', function() {
+      var value = falsifyIt(true);
+      equal(value, false, 'input true should return false');
+    });
+
+    test('falsifyIt returns false when passed an empty string', function() {
+      var value = falsifyIt('');
+      equal(value, false, 'input empty string should return false');
+    });
+
+  </script>
+
+</body>
+
+</html>
