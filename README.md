@@ -39,6 +39,11 @@
     - [Configuration Options](#configuration-options-2)
     - [Unique Methods](#unique-methods-5)
     - [Events](#events-5)
+  - [The Progressbar Widget](#the-progressbar-widget)
+    - [Configuration Options](#configuration-options-3)
+    - [Unique Methods](#unique-methods-6)
+    - [Events](#events-6)
+  - [Theming Widgets with Themeroller](#theming-widgets-with-themeroller)
   - [Development](#development)
   - [Build](#build)
   - [Deploy](#deploy)
@@ -501,6 +506,14 @@ Can be attached to any block level element.
 
 * change (fired every time value of progressbar changes, useful for updating text indicating amount complete so far)
 * complete (fired once 100% is reached)
+
+## Theming Widgets with Themeroller
+
+To customize visual aspects of widgets. Themeroller application can be found [here](http://jqueryui.com/themeroller/).
+
+Use the online app to make your own theme or download from a selection of existing custom themes.
+
+Can also select an existing theme, then click Edit to tweak it, then download your custom version of it.
 
 ## Development
 
