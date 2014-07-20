@@ -319,7 +319,8 @@ module.exports = function (grunt) {
                 'slider.js',
                 'datepicker.js',
                 'autocomplete.js',
-                'progressbar.js'
+                'progressbar.js',
+                'position.js'
               ]
             },
             themeImages: {

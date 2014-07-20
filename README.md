@@ -44,6 +44,7 @@
     - [Unique Methods](#unique-methods-6)
     - [Events](#events-6)
   - [Theming Widgets with Themeroller](#theming-widgets-with-themeroller)
+  - [The Position Utility](#the-position-utility)
   - [Development](#development)
   - [Build](#build)
   - [Deploy](#deploy)
@@ -514,6 +515,41 @@ To customize visual aspects of widgets. Themeroller application can be found [he
 Use the online app to make your own theme or download from a selection of existing custom themes.
 
 Can also select an existing theme, then click Edit to tweak it, then download your custom version of it.
+
+## The Position Utility
+
+[Demo](http://danielabar.github.io/jqui101-tuts/#position) | [JavaScript](app/scripts/position.js) | [HTML](app/partials/position.html)
+
+Several widgets depend on position utility. It can also be used in custom plugins or code.
+
+Used to position an element relative to any other element.
+
+Can also be used to position elements relative to the document,
+for example [Dialog Widget](#the-dialog-widget) uses position utility to center itself vertically and horizontally within the window.
+
+[Autocomplete Widget](#the-autocomplete-widget) by default display list below input.
+Position option can be used to customize, for example, to display the list to the right of the input.
+
+Position option takes object, for example
+
+  ```javascript
+  position: {
+    my: 'left top',   // affects element that is being positioned, first part of string is horizontal pos, second part is vertical pos
+    at: 'right top'   // refers to element its being positioned against
+  }
+  ```
+When position utility used with a widget, the widget is the thing that is being positioned against.
+
+When position utility is used with custom code, must manually set the thing that is being positioned against.
+This is accomplished using `of` key. For example, to position myElement relative to someOtherElement:
+
+  ```javascript
+  $('#myElement').position({
+    of: '#someOtherElement',
+    my: 'left bottom',
+    at: 'right top'
+  });
+  ```
 
 ## Development
 
