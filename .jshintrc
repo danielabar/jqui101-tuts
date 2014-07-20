@@ -29,6 +29,7 @@
         "Kinetic",
         "createjs",
         "THREE",
-        "toastr"
+        "toastr",
+        "myAppNamespace"
     ]
 }

@@ -13,7 +13,15 @@
 
 <body>
   <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
   <script src="../bower_components/qunit/qunit/qunit.js"></script>
+
+  <!-- Load Production Code -->
+  <script src="../scripts/master.js"></script>
+  <script src="../scripts/sum.js"></script>
+
+  <!-- Load Test Code -->
+  <script src="../unit/SumTest.js"></script>
 
   <!-- Production Code we want to test: in a real app, this would go in a separate file -->
   <script>

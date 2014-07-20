@@ -18,7 +18,8 @@ module.exports = function (grunt) {
     // Configurable paths
     var config = {
         app: 'app',
-        dist: 'dist'
+        dist: 'dist',
+        test: 'test'
     };
 
     // Define the configuration for all the tasks
@@ -58,7 +59,8 @@ module.exports = function (grunt) {
                 files: [
                     '<%= config.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
-                    '<%= config.app %>/images/{,*/}*'
+                    '<%= config.app %>/images/{,*/}*',
+                    '<%= config.test %>/unit/{,*/}*.js'
                 ]
             }
         },
@@ -78,7 +80,8 @@ module.exports = function (grunt) {
                         return [
                             connect.static('.tmp'),
                             connect().use('/bower_components', connect.static('./bower_components')),
-                            connect.static(config.app)
+                            connect.static(config.app),
+                            connect.static(config.test)
                         ];
                     }
                 }
