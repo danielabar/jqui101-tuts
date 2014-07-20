@@ -9,6 +9,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" />
+  <link rel="stylesheet" href="../bower_components/jqueryui/themes/eggplant/jquery-ui.css">
+  <link rel="stylesheet" href="../bower_components/jqueryui/themes/eggplant/theme.css">
 </head>
 
 <body>
@@ -16,12 +18,18 @@
   <div id="qunit-fixture"></div>
   <script src="../bower_components/qunit/qunit/qunit.js"></script>
 
+  <!-- Load Production Vendor Code -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/jqueryui/jquery-ui.js"></script>
+
   <!-- Load Production Code -->
   <script src="../scripts/master.js"></script>
   <script src="../scripts/sum.js"></script>
+  <script src="../scripts/DialogService.js"></script>
 
   <!-- Load Test Code -->
   <script src="../unit/SumTest.js"></script>
+  <script src="../unit/DialogServiceTest.js"></script>
 
   <!-- Production Code we want to test: in a real app, this would go in a separate file -->
   <script>
